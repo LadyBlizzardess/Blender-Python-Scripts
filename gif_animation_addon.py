@@ -49,6 +49,8 @@ class CreateGif(Operator):
         frames[0].save(f'{file_path}{gif_name}.gif',
                        save_all=True,
                        append_images=frames[1:],
+                       transparency=255,
+                       disposal=2,
                        optimize=optimize,
                        duration=duration,
                        loop=loop)
